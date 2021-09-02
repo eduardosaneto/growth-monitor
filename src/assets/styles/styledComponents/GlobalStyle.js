@@ -5,10 +5,6 @@ const GlobalStyle = createGlobalStyle`
         background: #fff;
         font-family: 'Varela Round', sans-serif;
     }
-
-    *::-webkit-scrollbar {
-        display: none;
-    }
 `;
 
 export default GlobalStyle;

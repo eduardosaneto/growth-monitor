@@ -8,6 +8,7 @@ export const PostContainer = styled.div`
   padding: 18px 18px 20px 21px;
   background: #e5e5e5;
   border-radius: 16px;
+  margin-bottom: 16px;
 
   .button:focus,
   .button:hover {
@@ -28,10 +29,10 @@ export const UserName = styled.div`
   padding: 10px;
   display: flex;
   align-items: center;
-  background-color: red;
-
+  
   h2 {
     font-size: 22px;
+    color: #192c35;
   }
 `;
 
@@ -41,10 +42,10 @@ export const Title = styled.div`
   padding: 10px;
   display: flex;
   align-items: center;
-  background-color: green;
 
   p {
     font-size: 20px;
+    color: #192c35;
   }
 `;
 
@@ -54,9 +55,9 @@ export const Body = styled.div`
   padding: 10px;
   display: flex;
   align-items: center;
-  background-color: blue;
-
+  
   p {
     font-size: 18px;
+    color: #192c35;
   }
 `;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 import {
@@ -7,26 +7,24 @@ import {
   Posts,
 } from "../assets/styles/styledComponents/HomeStyle";
 
+import { PostContainer, UserName, Title, Body } from '../assets/styles/styledComponents/PostStyle'
+
 import Navbar from "./Navbar";
-import Post from "./Post";
 
 export default function Home() {
+  const [posts, setPosts] = useState([]);
 
-    const [posts, setPosts] = useState([]);
+  useEffect(() => loadPosts(), []);
 
-    useEffect(() => loadPosts(),[]);
-
-    function loadPosts() {
-        setPosts([])
-        const request = axios.get('process.env.REACT_APP_POSTS')
-
-        request.then( response => {
-            setPosts(response.data)
-        })
-        request.catch(err => {
-            alert(`Couldn't load the posts: ${err}`);
-        });
-    }
+  function loadPosts() {
+    const request = axios.get(process.env.REACT_APP_POST);
+    request.then((response) => {
+      setPosts(response.data);
+    });
+    request.catch((err) => {
+      alert(`Couldn't load the posts: ${err}`);
+    });
+  }
 
   return (
     <>
@@ -36,13 +34,15 @@ export default function Home() {
           <h1>Main Posts</h1>
         </PageTitle>
         <Posts>
-            {posts.map(post =>
-                <Post 
-                    key={post.id} id={post.id} 
-                    user={post.user.name} username={post.user.username}
-                    title={post.title} body={post.body}
-                />
-            )}
+          {posts.map((post) => (
+            <PostContainer key={post.id}>
+                <UserName>
+                    <h2>{post.user.name}</h2>
+                </UserName>
+                <Title><p>{post.title}</p></Title>
+                <Body><p>{post.body}</p></Body>
+            </PostContainer>
+          ))}
         </Posts>
       </Container>
     </>
