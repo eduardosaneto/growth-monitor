@@ -1,22 +1,22 @@
 import styled from "styled-components";
 
 import Navbar from "./Navbar";
+import Post from "./Post";
 
-export default function Home(){
-    return (
-        <>
-            <Navbar/>
-            <Container>
-                <PageTitle>
-                    <h1>Main Posts</h1>
-                </PageTitle>
-                <div>
-                    <Posts>
-                    </Posts>
-                </div>
-            </Container>
-        </>
-    );
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      <Container>
+        <PageTitle>
+          <h1>Main Posts</h1>
+        </PageTitle>
+          <Posts>
+              <Post/>
+          </Posts>
+      </Container>
+    </>
+  );
 }
 
 const Container = styled.div`
@@ -27,13 +27,7 @@ const Container = styled.div`
   h1 {
     font-size: 43px;
     font-family: "Varela Round", sans-serif;
-    color: #192C35;
-  }
-
-  > div {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 43px;
+    color: #192c35;
   }
 
   @media (max-width: 937px) {
@@ -60,14 +54,15 @@ const PageTitle = styled.div`
   justify-content: space-between;
   align-items: center;
   word-break: break-all;
-  @media(max-width: 611px){
+  @media (max-width: 611px) {
     padding: 0 17px;
     position: relative;
   }
 `;
 
-export const Posts = styled.div`
-  width: 65.2%;
+const Posts = styled.div`
+  width: 65%;
+  margin: 43px auto 0 auto;
 
   ul {
     width: 100%;
@@ -78,7 +73,7 @@ export const Posts = styled.div`
     justify-content: space-between;
     height: 237px;
     padding: 18px 18px 20px 21px;
-    background: #F7F7F7;
+    background: #000;
     border-radius: 16px;
     margin-bottom: 16px;
   }
@@ -91,3 +86,5 @@ export const Posts = styled.div`
     width: 100%;
   }
 `;
+
+
