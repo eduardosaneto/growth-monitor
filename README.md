@@ -30,4 +30,4 @@ npm run build
 ```
 4. Finally access http://localhost:3000 on your favorite browser 
 
-OBS: If you want a full experience please check the back-end repository for this project and follow the instructions run it along with the front-end.
+OBS: If you want a full experience please check the [back-end repository](https://github.com/eduardosaneto/growth-monitor-back) for this project and follow the instructions run it along with the front-end.
