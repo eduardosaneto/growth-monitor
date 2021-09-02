@@ -2,6 +2,9 @@
 An application to monitor posts of employees from a wide range of companies.
 ## About 🔎
 This is an web aplication wich constributors can access and check what companies employees have been posting.
+
+## Feel free to try it:
+https://growth-monitor.vercel.app/
 ## Tech tools 🔧
 The following tools and frameworks were used in the construction of the project:<br>
 <p>
