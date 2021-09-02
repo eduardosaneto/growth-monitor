@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyle = createGlobalStyle`
     body {
         background: #fff;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Varela Round', sans-serif;
     }
 
     *::-webkit-scrollbar {

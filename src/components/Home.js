@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
+import Navbar from "./Navbar";
+
 export default function Home(){
     return (
         <>
+            <Navbar/>
             <Container>
                 <PageTitle>
                     <h1>Main Posts</h1>
@@ -23,8 +26,8 @@ const Container = styled.div`
 
   h1 {
     font-size: 43px;
-    font-family: "Oswald", sans-serif;
-    color: #fff;
+    font-family: "Varela Round", sans-serif;
+    color: #192C35;
   }
 
   > div {
@@ -75,7 +78,7 @@ export const Posts = styled.div`
     justify-content: space-between;
     height: 237px;
     padding: 18px 18px 20px 21px;
-    background: #171717;
+    background: #F7F7F7;
     border-radius: 16px;
     margin-bottom: 16px;
   }
